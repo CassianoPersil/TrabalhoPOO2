@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Views;
+package Views.clientes;
 
-import com.sun.javafx.css.CalculatedValue;
+import Views.CalculoEnergia;
 
 /**
  *
@@ -35,7 +35,7 @@ public class ListaClientes extends javax.swing.JDialog {
         btEditar = new javax.swing.JButton();
         btNovo = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -99,13 +99,13 @@ public class ListaClientes extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSairActionPerformed
-        dispose();
+        //dispose();
     }//GEN-LAST:event_btSairActionPerformed
 
     private void btNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNovoActionPerformed
        CalculoEnergia ce = new CalculoEnergia();
-       ce.setModal(true);
-       ce.setModal(true);
+       //ce.setModal(true);
+       //ce.setModal(true);
     }//GEN-LAST:event_btNovoActionPerformed
 
     /**
