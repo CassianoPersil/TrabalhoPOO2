@@ -5,7 +5,11 @@
  */
 package Views.clientes;
 
+import Controller.Cliente;
 import Views.CalculoEnergia;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -13,11 +17,29 @@ import Views.CalculoEnergia;
  */
 public class ListaClientes extends javax.swing.JDialog {
 
+    DefaultTableModel tabelaClientes;
+    List<Cliente> c;
+
     /**
      * Creates new form ListaClientes
      */
     public ListaClientes() {
         initComponents();
+        tabelaClientes = (DefaultTableModel) tbClientes.getModel();
+        listarClientes();
+    }
+
+    private void listarClientes() {
+        tbClientes.setModel(new DefaultTableModel(
+                new Object[][]{}, new String[]{"Código", "Nome", "Tipo"}));
+        DefaultTableModel tabela = (DefaultTableModel) tbClientes.getModel();
+        try {
+            for (Cliente cliente : c) {
+                tabela.addRow(new Object[]{cliente.getId_cliente(), cliente.getNome_cliente(), cliente.getTipo_cliente()});
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, "Erro" + e);
+        }
     }
 
     /**
@@ -30,14 +52,14 @@ public class ListaClientes extends javax.swing.JDialog {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tbClientes = new javax.swing.JTable();
         btSair = new javax.swing.JButton();
         btEditar = new javax.swing.JButton();
         btNovo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -48,7 +70,7 @@ public class ListaClientes extends javax.swing.JDialog {
 
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tbClientes);
 
         btSair.setText("Sair");
         btSair.addActionListener(new java.awt.event.ActionListener() {
@@ -103,9 +125,9 @@ public class ListaClientes extends javax.swing.JDialog {
     }//GEN-LAST:event_btSairActionPerformed
 
     private void btNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNovoActionPerformed
-       CalculoEnergia ce = new CalculoEnergia();
-       //ce.setModal(true);
-       //ce.setModal(true);
+        C
+        //ce.setModal(true);
+        //ce.setModal(true);
     }//GEN-LAST:event_btNovoActionPerformed
 
     /**
@@ -148,6 +170,6 @@ public class ListaClientes extends javax.swing.JDialog {
     private javax.swing.JButton btNovo;
     private javax.swing.JButton btSair;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tbClientes;
     // End of variables declaration//GEN-END:variables
 }
