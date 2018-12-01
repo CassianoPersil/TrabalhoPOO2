@@ -125,7 +125,6 @@ public class ListaClientes extends javax.swing.JDialog {
     }//GEN-LAST:event_btSairActionPerformed
 
     private void btNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNovoActionPerformed
-        C
         //ce.setModal(true);
         //ce.setModal(true);
     }//GEN-LAST:event_btNovoActionPerformed

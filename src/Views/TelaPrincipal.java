@@ -144,13 +144,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_subContEnerActionPerformed
 
     private void subMListaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMListaClienteActionPerformed
-        ListaClientes lc = new ListaClientes();
-        lc.setVisible(true);
-        lc.setModal(true);
+        
     }//GEN-LAST:event_subMListaClienteActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
+        ListaClientes lc = new ListaClientes();
+        lc.setVisible(true);
+        lc.setModal(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed

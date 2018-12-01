@@ -6,6 +6,9 @@
 package Classes;
 
 
-public class Conta {
-    
+public abstract class Conta {
+    String nomeDoCliente;
+    double consumo;
+    double iluminacaoPublica;
+    public abstract double calcularConta();
 }
